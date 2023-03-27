@@ -6,41 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       .container {
         width: 100%;
-        height: 80vh;
         background-color: grey;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .box {
+      .player {
+        aspect-ratio: 16/9;
+        width: 70%;
         box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
         animation: animate 5s ease-in-out infinite;
         transition: all 1s ease-in-out;
       }
 
+      /* https://9elements.github.io/fancy-border-radius/full-control.html#38.38.49.0-61.56.69.100-. */
       @keyframes animate {
         0% {
-          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+          border-radius: 47% 34% 18% 22% / 31% 56% 32% 26%;
         }
-        50% {
+        30% {
           border-radius: 30% 70% 70% 40%/50% 60% 30% 60%;
         }
+
+        70% {
+          border-radius: 38% 44% 9% 14% / 55% 49% 20% 24%;
+        }
         100% {
-          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+          border-radius: 47% 34% 18% 22% / 31% 56% 32% 26%;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <img class="box" src="../src/img/sample.jpg" alt="" />
+      <iframe
+        class="player"
+        src="https://www.youtube.com/embed/JNZoW149nA0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </div>
   </body>
 </html>
